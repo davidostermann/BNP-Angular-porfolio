@@ -1,0 +1,12 @@
+<!-- <ul>
+  <li (click)="selectMenu('mentions')" [style.color]="menuService.selectedMenu == 'mentions' ? 'red' : 'blue'">
+    Mentions légales</li>
+  <li (click)="selectMenu('contrib')" [style.color]="menuService.selectedMenu == 'contrib' ? 'red' : 'blue'">
+    Contributeurs</li>
+</ul> -->
+<ul>
+  <li *ngFor="let menu of menuService.getList('footer')" [style.color]="menuService.selectedMenu == menu.id ? 'red' : 'blue'"
+    (click)="selectMenu(menu.id)">
+    {{ menu.label }}
+  </li>
+</ul>

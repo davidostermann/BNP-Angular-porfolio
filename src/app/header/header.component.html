@@ -1,0 +1,16 @@
+<!-- <ul>
+  <li (click)="selectMenu('bio')" [style.color]="menuService.selectedMenu == 'bio' ? 'red' : 'blue'">
+    Bio</li>
+  <li (click)="selectMenu('real')" [style.color]="menuService.selectedMenu == 'real' ? 'red' : 'blue'">
+    Réalisations</li>
+  <li (click)="selectMenu('contact')" [style.color]="menuService.selectedMenu == 'contact' ? 'red' : 'blue'">
+    Contact</li>
+</ul> -->
+<ul>
+  <li
+    *ngFor="let menu of menuService.getList('header')"
+    [style.color]="menuService.selectedMenu == menu.id ? 'red' : 'blue'"
+    (click)="selectMenu(menu.id)">
+    {{ menu.label }}
+  </li>
+</ul>
