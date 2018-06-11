@@ -45,6 +45,13 @@ export class MenuService {
       title: 'Contributeurs',
       content: 'Lorem ipsum ... contributeurs...',
       position: 'footer'
+    },
+    {
+      id: MenuType.PARTNER,
+      label: 'Partenaires',
+      title: 'Partenaires',
+      content: 'Lorem ipsum ... Partenaires...',
+      position: 'footer'
     }
   ];
   getList(position): Menu[] {

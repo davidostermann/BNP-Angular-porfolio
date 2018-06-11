@@ -6,11 +6,9 @@
   <li (click)="selectMenu('contact')" [style.color]="menuService.selectedMenu == 'contact' ? 'red' : 'blue'">
     Contact</li>
 </ul> -->
-<ul>
-  <li
-    *ngFor="let menu of menuService.getList('header')"
-    [style.color]="menuService.selectedMenu == menu.id ? 'red' : 'blue'"
+<mat-toolbar [color]="'primary'" fxLayout="row" fxLayoutAlign="space-around center">
+  <span *ngFor="let menu of menuService.getList('header')" [style.color]="menuService.selectedMenu == menu.id ? 'grey' : 'white'"
     (click)="selectMenu(menu.id)">
     {{ menu.label }}
-  </li>
-</ul>
+  </span>
+</mat-toolbar>

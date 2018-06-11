@@ -4,7 +4,8 @@
   <li (click)="selectMenu('contrib')" [style.color]="menuService.selectedMenu == 'contrib' ? 'red' : 'blue'">
     Contributeurs</li>
 </ul> -->
-<ul>
+<ul fxLayout="column" fxLayoutAlign="start center"
+    fxLayout.gt-xs="row" fxLayoutAlign.gt-xs="space-around center">
   <li *ngFor="let menu of menuService.getList('footer')" [style.color]="menuService.selectedMenu == menu.id ? 'red' : 'blue'"
     (click)="selectMenu(menu.id)">
     {{ menu.label }}

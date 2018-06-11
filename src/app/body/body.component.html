@@ -47,8 +47,8 @@
 </ng-container> -->
 
 <ng-container *ngFor="let menu of menuService.list">
-  <ng-container *ngIf="menu.id === menuService.selectedMenu">
+  <div *ngIf="menu.id === menuService.selectedMenu">
     <h2>{{menu.title}}</h2>
     <p>{{ menu.content }}</p>
-  </ng-container>
+  </div>
 </ng-container>
